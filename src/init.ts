@@ -23,10 +23,10 @@ export const initStorageState = <T extends WebStorageSchema>(
   const getStorageState = () => {
     const item = storage.getItem(key);
 
-    if (!item) {
+    if (item === null) {
       return item;
     }
-    return zodSchema.parse(JSON.parse(item));
+    return zodSchema.parse(JSON.parse(item)) as WebStorageSchemaToType<T>;
   };
 
   return { getStorageState, setStorageState };

@@ -1,8 +1,8 @@
 {
   "name": "type-safe-web-storage",
-  "version": "0.0.1",
+  "version": "0.0.5",
   "description": "A minimal library to access web storages in a type safe way",
-  "main": "index.js",
+  "main": "lib/index.js",
   "scripts": {
     "build": "npx tsc"
   },
